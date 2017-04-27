@@ -1,0 +1,14 @@
+<div class="site_index_container">
+	<div class="topic_box">
+		<ul class="topic_list">
+			<% topics.forEach(function(topic){ %>
+			<li class="topic_item">
+				<div class="author topic_item_span"><%= topic.author.username %></div>
+				<div class="percent topic_item_span"><%= topic.reply_count %> / <%= topic.visit_count %></div>
+				<a class="title topic_item_span" href="#"><%= topic.title %></a>
+				<div class="last_comment topic_item_span"><%= topic.last_reply_time %></div>
+			</li>
+			<% }); %>
+		</ul>
+	</div>
+</div>

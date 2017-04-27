@@ -1,0 +1,21 @@
+<div id="shout_box_container">
+	<div id="history_container">
+		<ul class="history_box">
+			<% messageList.forEach(function(messageObj){%>
+			<li>
+				<div class="author"><%=messageObj.author%></div>
+				<div class="content"><%=messageObj.content%></div>
+				<div class="time_stamp"><%=messageObj.update_time%></div>
+			</li>
+			<% });  %>
+		</ul>
+	</div>
+	<div id="shout_box_input_container">
+		<form action="/shout_box" method="post" id="shout_box">
+			<textarea name="content" class="input_textarea"></textarea>
+			<div class="input_button_group">
+				<input type="submit" value="提交" class="submit_button"/>
+			</div>
+		</form>
+	</div>
+</div>
